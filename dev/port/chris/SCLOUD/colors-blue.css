@@ -1,0 +1,159 @@
+.sc-player {
+  font: 12px Arial, sans-serif;
+  color: #333;
+  font-size: 0.6em;
+  line-height: 1.6em;
+  /*background:#efefef;
+  background: -moz-linear-gradient(top, black, #eee 0px, #fff 50%);
+  background: -webkit-gradient(linear, left top, left 50%, from(black), color-stop(0%, #eee), to(#fff));
+  -moz-box-shadow: 1px 1px 4px #ccc;
+  -webkit-box-shadow: 1px 1px 4px #ccc;
+  */
+}
+
+.sc-player a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Artworks */
+
+.sc-player .sc-artwork-list{
+  background: #eee;
+  background: -moz-linear-gradient(left bottom, #EEEEEE 20px, #333333 350px) repeat scroll 0 0 transparent;
+  background: -webkit-gradient(linear, right top, left bottom, from(#333), to(#eee));
+}
+
+/* scrubber */
+
+.sc-scrubber {
+  background-color: transparent;
+}
+
+.sc-scrubber .sc-time-span {
+	display:none;
+  	background-color: #fff;
+}
+
+.sc-waveform-container{
+	background:transparent;
+}
+.sc-scrubber .sc-time-span img {
+  height: 30px;
+  width: 100%;
+  background-color: white; //#003399;
+  background: rgba(40,40,200,.7);
+  //background: -moz-linear-gradient(top, black, #003399 0px, #5d95d2 90%);
+  //background: -webkit-gradient(linear, left top, left 90%, from(black), color-stop(0%, #003399), to(#5d95d2));
+}
+
+.sc-scrubber .sc-buffer {
+  background-color: #EEE;
+  backgrond: rgba(250,250,250,.2); opacity:.2;
+}
+
+.sc-scrubber .sc-played {
+  background-color:#EEE;
+  //background:rgba(190,190,190,.5); opacity:.5;
+}
+
+/* controls */
+.sc-player .sc-controls a{
+	background-repeat: no-repeat;
+}
+
+.sc-player .sc-controls a {
+  color: transparent;
+  background-image: url('../images/player/playpause2.png');
+  background-position: -31px 0px;
+}
+
+.sc-player .sc-controls a:hover {
+  background-position: 0px 0px;
+}
+
+.sc-player .sc-controls a.sc-pause {
+  background-position: -31px -31px;
+}
+
+.sc-player .sc-controls a.sc-pause:hover{
+  background-position: 0px -31px;
+}
+
+.sc-player.playing .sc-controls a.sc-pause{
+  background-position: -31px -31px;
+}
+
+.sc-player.playing .sc-controls a.sc-pause:hover{
+  background-position: 0px -31px;
+}  
+
+.sc-scrubber .sc-time-indicators{
+  text-align: right;
+}
+
+/* Track listings*/
+
+.sc-player ol.sc-trackslist li.active, .sc-player ol.sc-trackslist li:hover {
+  background-color: #fff;
+  padding: 4px;
+  color: #003399;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-box-shadow: 1px 1px 4px #ccc;
+  -webkit-box-shadow: 1px 1px 4px #ccc;
+}
+
+.sc-player ol.sc-trackslist li.active a {
+  color: #003399;
+}
+
+.sc-track-duration {
+  text-align: right;
+  float: right;
+  padding: 0 5px;
+  margin-left: 5px;
+}
+
+/* Buttons */
+
+.sc-player .sc-info-toggle{
+	display:none;
+  color: transparent; //#003399;
+  padding: 3px;
+}
+
+.sc-scrubber .sc-time-indicators{
+	background:transparent;
+  color: #003399;
+  padding: 3px;
+}
+
+.sc-player .sc-info-toggle:hover{
+	background-color:#FFF;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-box-shadow: 1px 1px 4px #ccc;
+  -webkit-box-shadow: 1px 1px 4px #ccc;
+  padding: 4px;
+}
+
+/* Track info */
+
+.sc-player .sc-title{
+	color: #003399;
+}
+
+.sc-player .sc-info{
+  background: #fff;
+  background-color: rgba(255,255,255,.95);
+}
+
+.sc-player .sc-info-close{
+  background: #003399;
+  color: #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding: 2px 4px;
+  font-weight: bold;
+}

@@ -1,0 +1,384 @@
+/* CORG.CSS ~ styling for www.corg.us ~ Corey Gravelle 2013 */
+
+@charset "utf-8";
+
+html { }
+
+body { 
+	font-family: 'Source Sans Pro', sans-serif; // 'Josefin Sans', 'Advent Pro'
+	font-weight:200; font-size: 16px; line-height:1.6em;
+	min-width: 300px;
+	background: #2a2a2a;
+	height:100%;
+	width:100%;
+	color: #444;
+}
+
+.navbar .brand, #port-frame .title, h1, h2, h3, h4 {
+	font-family: 'Advent Pro', sans-serif;
+}
+
+.full_screen {
+	height:100%;
+	width: 100%;
+	z-index:20;
+}
+
+h1, h2, h3{ font-weight: bold; }
+h2 { font-size: 18px; display: inline;}
+h3{ font-size: 16px; }
+
+/* CSS3 TRANSITIONS */
+.navbar .brand, h1, h2, h3, a, .nav > li > a {
+	-webkit-transition: all .2s ease-out;	-moz-transition: all .2s ease-out;
+  	-o-transition: all .2s ease-out; transition: all .2s ease-out;
+}
+
+.navbar .brand:hover, .nav > li > a:hover, a:hover {
+	color:#666;
+	//text-shadow: 0px 0px 1px #999;
+	text-decoration:none;
+	cursor: pointer;
+}
+a { 
+	color: #369;
+	text-decoration: none; 
+}
+a:hover { color: #390; }
+
+
+/* =============================================================================
+   Header
+   ========================================================================== */
+   
+#noscript_div {
+	position:fixed;
+	display:none;
+	width:100%;
+	height: 100px;
+	text-align:center;
+	line-height: 90px;
+	font-size: 16px;
+	background: #CCC;
+	color: #03C;
+}
+
+#corg_header {
+	position:relative;
+	height: 65px;
+	background-color: #090909;
+	font-size:18px;
+	line-height: 20px;
+	padding-top:40px;
+}
+#header_left{
+	color: #aaa;
+	float:left;
+}
+img#header_logo{
+	width:16px;
+	height:16px;
+	margin: 0px 10px -3px 0;
+}
+#header_mid{
+	text-align:center;
+}
+#header_right{
+	float:right;
+	color: #444;
+}
+#header_right a{
+	color: #444;
+}
+#header_right a:hover{
+	color: #069;	
+}
+
+
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+   
+
+#main { 
+	width:100%;
+	height: 100%;
+}
+
+.row { 
+	position:relative;
+	max-width: 900px;
+	margin:0 auto;
+}
+.port { border: 1px solid transparent; }
+.port_deets {
+	display:none;
+	padding: 10px 0px;	
+}
+
+.box{ position:relative;}
+.box_title { 
+	margin: 0 auto; 
+	text-align: center;
+}
+
+/* BOX COLORS [header,1,2,3,4,footer] = [000000,131313,1a1a1a,1f1f1f,292929,333] */
+/*									or: [000000,050607,05090a,070b0c,090d0f,0b0e10] */
+
+
+.box1	{	
+	border-top: 6px double #090909;
+	color: #555;
+	background: #1a1a1a; 
+	/*
+	background-image: linear-gradient(bottom, rgb(26,41,53) 0%, rgb(26,26,26) 75%);
+	background-image: -o-linear-gradient(bottom, rgb(26,41,53) 0%, rgb(26,26,26) 75%);
+	background-image: -moz-linear-gradient(bottom, rgb(26,41,53) 0%, rgb(26,26,26) 75%);
+	background-image: -webkit-linear-gradient(bottom, rgb(26,41,53) 0%, rgb(26,26,26) 75%);
+	background-image: -ms-linear-gradient(bottom, rgb(26,41,53) 0%, rgb(26,26,26) 75%);
+	*/
+}
+.box2	{	
+	background: #212121; 
+	border-top: 6px double  #1a1a1a;
+	color: #575757;
+}
+
+/*.box3	{	
+	background: #1f1f1f; 
+	border-top: 6px double #1a1a1a; // #070b0c;
+	color: #595959;
+}
+.box4	{	
+	background: #292929; 
+	border-top: 6px double #222; // #090d0f;
+	color: #5d5d5d;
+}
+*/
+
+.button_stuff {
+	
+	position:relative;
+	width: 100%;
+	height:130px;
+}
+.butt_light { color: #eee;}
+.butt_dark { color: #999;}
+
+.port_click, .port_button, .port_button_blur{
+	position:absolute;
+	display:block;
+	height:90px;
+	width: 100%;
+	margin: 15px 0px;
+}
+.port_click{
+	// color:#999;
+	font-weight: 400;
+	-moz-box-shadow:    inset 0 0 40px 20px #000000;
+	-webkit-box-shadow: inset 0 0 40px 20px #000000;
+	box-shadow:         inset 0 0 40px 20px #000000;
+	z-index: 6;
+}
+.port_button_blur { z-index:5; }
+
+.port_button, .port_button_blur  {
+	// background: rgba(30,30,30,.5);
+	background-image: url(../img/port_buttons_3.jpg);
+	z-index:4;
+}
+
+#port_splice .port_button		{background-position: 0px -150px; }
+#port_splice .port_button_blur	{background-position: 0px 0px;	}
+#port_mops .port_button			{background-position: 0px -450px;	}
+#port_mops .port_button_blur	{background-position: 0px -300px;	}
+#port_uni .port_button			{background-position: 0px -750px;	}
+#port_uni .port_button_blur	{background-position: 0px -600px;	}
+#port_dw .port_button			{background-position: 0px -1050px;	}
+#port_dw .port_button_blur		{background-position: 0px -900px;	}
+#port_pao .port_button		{background-position: 0px -1350px;	}
+#port_pao .port_button_blur	{background-position: 0px -1200px;	}
+#port_qblik .port_button		{background-position: 0px -1650px;	}
+#port_qblik .port_button_blur	{background-position: 0px -1500px;	}
+#port_jaclyn .port_button		{background-position: 0px -1950px;	}
+#port_jaclyn .port_button_blur	{background-position: 0px -1800px;	}
+#port_chris .port_button		{background-position: 0px -2250px;	}
+#port_chris .port_button_blur	{background-position: 0px -2100px;	}
+
+.port_click:hover, .port_button:hover, .port_header:hover 
+	{ cursor: pointer; }
+.hidden_button:hover 
+	{ cursor: auto !important;  }
+
+.port_header {
+	opacity:0;
+	position: absolute;
+	font-size: 16px;
+	height: 30px;
+	left:0; right:0;
+}
+.port_title {
+	float:left;
+	z-index:10;
+}
+.port_client {
+	float:right;
+	z-index:2;
+}
+.port_info {
+	margin: 30px 0;
+	-webkit-box-shadow: 0 8px 20px -20px #000;
+	-moz-box-shadow:	0 8px 20px -20px #000;
+	box-shadow:			0 8px 20px -20px #000;
+}
+
+@media (max-width: 600px) {
+	.row { width = 100%; }
+	// .pad_h { padding-left: 15px; padding-right: 15px; }
+	.port-box{
+		width: 47%;
+		height: 150px;
+		margin-right: 3%;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 979px) {
+	.row { width: 100%;}
+	.port-box{
+		width: 31%;
+		margin-right: 2%;
+	}
+}
+@media (max-width: 950px) {
+		.pad_h { padding-left: 15px; padding-right: 15px; }
+}
+@media (min-width: 979px) {
+	.row { width: 979px; }
+	.pad_h {padding-left: 0; padding-right: 0;}
+	.port-box{
+		width: 23%; 
+		height:230px;
+		margin-right: 2%;
+	}
+}
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+#corg_footer { 
+	border-top: 6px double #212121;
+	font-size:14px;
+	padding-bottom: 20px;
+	height: 20px;
+	color: #666;
+}
+footer a { 
+	color: #669;
+}
+
+
+
+/* ==========================================================================
+   WordPress Inspired Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+
+img.alignleft, img.aligncenter {padding-left:0;}
+img.alignright {padding-right:0;}
+
+
+
+/* ==========================================================================
+   OTHER
+   ========================================================================== */
+
+.center{
+	width:270px;
+	height:150px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-75px 0 0 -135px;
+}
+
+.pad{ padding:15px; }
+.pad30{ padding:30px; }
+.pad_v { padding-top: 15px; padding-bottom: 15px;}
+.pad_hlock { padding-left: 15px !important; padding-right: 15px !important;}
+
+.shadow_inner {
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	-moz-box-shadow:    inset 0 0 10px #000000;
+	box-shadow:         inset 0 0 10px #000000;
+}
+.shadow_outer {
+	-webkit-box-shadow: 0px 0px 5px 6px #ccc;
+	-moz-box-shadow:    0px 0px 5px 6px #ccc;
+	box-shadow:         0px 0px 5px 6px #ccc;
+}
+.shadow_under {
+	-webkit-box-shadow: 0 8px 6px -6px #000;
+	-moz-box-shadow:	0 8px 6px -6px #000;
+	box-shadow:			0 8px 6px -6px #000;
+}
+.shadow_over {
+	-webkit-box-shadow: 0 -8px 16px -16px #000;
+	-moz-box-shadow:	0 -8px 16px -16px #000;
+	box-shadow:			0 -8px 16px -16px #000;
+}
+
+.drop_shadow
+{
+  // position: relative;
+  // width: 60%;
+  background: #ddd;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 2em 1.5em;
+  color: rgba(0,0,0, .8);
+  text-shadow: 0 1px 0 #fff;
+  line-height: 1.5;
+  margin: 60px auto;
+  z-index:3;
+}
+
+
+.drop_shadow:before, .drop-shadow:after 
+{
+  z-index: 2; 
+  position: absolute; 
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%; 
+  top: 80%;
+  max-width:300px;
+  background: rgba(0, 0, 0, 0.7); 
+  -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);   
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(-2deg);    
+  -moz-transform: rotate(-2deg);   
+  -o-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+
+.drop_shadow:after 
+{
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+  right: 10px;
+  left: auto;
+}

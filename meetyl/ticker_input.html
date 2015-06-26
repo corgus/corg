@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>focus list input testing</title>
+<meta name="viewport" content="width=device-width">
+<link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+  
+<body>
+  
+  <style>
+    input, #text1out, textarea
+    {
+      display: block;
+      width:300px;
+      margin:20px;
+      min-height:30px;
+      max-height: 200px;
+      border: 1px solid #333;
+    }
+  </style>
+  
+  
+  <textarea type="text" id="text1">Company Name or Tickers</textarea>
+
+  <!-- output: <textarea id="text1out"></textarea -->
+  
+  
+<script>
+  jQuery("#text1").keyup(function() { 
+          var instr = jQuery("#text1").val();
+          var outstr = instr.replace(/\r?\n/g, "; ");
+          jQuery("#text1").val(outstr)
+				.height( 0 )
+				.height( this.scrollHeight );
+  });
+  
+</script>
+  
+  
+</body>
+</html>
+
+
+<!-- TEST:
+
+ABC
+SLKJ
+DJFL
+SDKLF
+TSE:GOSL
+TSE:WELK
+SLKD
+SDL
+FELW
+SLD
+DSLF
+GOOG
+COKE
+SAD
+FSDA
+ASDF
+WERR
+QWER
+TRE
+SDFH
+SDCS
+TGRE
+TSE:YTJ
+TSE:NFD
+NBTR
+NBT
+SRD
+BREW
+SRED
+BVR
+
+-->

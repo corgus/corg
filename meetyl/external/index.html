@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>meetyl header css</title>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+
+</head>
+
+<style>
+
+/* @font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/OpenSans-Regular-webfont.eot');
+    src: url('fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+    font-weight: normal;
+    font-weight: 300;
+    font-style: normal;
+} */
+
+/* @font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/OpenSans-Light-webfont.eot');
+    src: url('fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+} */
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+	width:100%;
+	height:100%;
+	margin: 0;
+	padding: 0;
+}
+
+#header_container {
+	width:100%;	
+	height: 500px;
+	overflow:hidden;
+	border-bottom: 1px solid red;
+}
+
+@media (max-width:2000px) {
+	#header_center {
+		margin-left:50%;
+		width:100%;
+	}
+	#header_img {
+		position:relative;
+		margin-left:-1000px;
+		width:100%;
+		min-width:2000px;
+		bottom:-40px;
+	}
+}
+@media (min-width:2000px) {
+	#header_center {
+		margin-left:0px;
+		width:100%;
+	}
+	#header_img {
+		position:relative;
+		width:100%;
+		min-width:2000px;
+		bottom:-40px;
+	}
+}
+
+#buffer{
+    height:200px;
+    width: 100%;
+    background: #fff;
+    -moz-box-shadow: 0px 0px 15px #666666;
+    -webkit-box-shadow: 0px 0px 15px #666666;
+        box-shadow: 0px 0px 15px #666666;
+    font-size:18px;
+}
+
+.three-hundred {
+    font-weight:300;
+}
+.four-hundred {
+    font-weight:400;
+}
+
+footer {
+    background-color: #dddddd;
+    color: #666;
+    text-align: center;
+    padding: 50px 0px;
+}
+
+footer a {
+    color: #666;
+    padding: 0 10px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size:18px;
+}
+
+footer .copyright {
+    margin-top:20px;
+    font-size: 14px;
+    color: #888;
+}
+
+
+</style>
+
+
+
+<body>
+
+<img width='150px' src='http://www.corg.us/meetyl/external/assets/logo.png'/>
+<img src='http://www.corg.us/meetyl/external/assets/logo_small.png'/>
+
+<div id="header_container"><div id="header_center">
+<img id="header_img" src="http://oi40.tinypic.com/169gjtw.jpg" />
+</div></div>
+
+<div id="buffer" class="four-hundred">
+    (font-weight: 400) Meetyl was commercialized in 2013 by a team of experienced managers with backgrounds in Equity Research, Institutional Equity Sales, and Investment Management with the goal of providing an expansive platform to facilitate communications within the financial services community. We believe that the financial services industry is in the midst of tremendous secular change and that putting companies, investors, and industry contacts in touch with each other can be done in a much more transparent, targeted and cost-efficient manner. We are complemented in our efforts by our software development team with a strong background in design and implementation of reciprocal filtering technology. 
+</div>
+
+<div id="buffer" class="three-hundred">
+    (font-weight: 300) Meetyl was commercialized in 2013 by a team of experienced managers with backgrounds in Equity Research, Institutional Equity Sales, and Investment Management with the goal of providing an expansive platform to facilitate communications within the financial services community. We believe that the financial services industry is in the midst of tremendous secular change and that putting companies, investors, and industry contacts in touch with each other can be done in a much more transparent, targeted and cost-efficient manner. We are complemented in our efforts by our software development team with a strong background in design and implementation of reciprocal filtering technology. 
+</div>
+
+<footer>
+    <a>Privacy</a> | <a>Terms</a> |<a>FAQs</a> |<a>Contact</a>
+    <div class="copyright">Copyright &copy 2013 Meetyl. All Rights Reserved.</div>
+</footer>
+
+
+</body>
+
+
+</html>
